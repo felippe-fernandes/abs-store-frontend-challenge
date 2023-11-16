@@ -2,12 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 body {
-    background-color: ${({ theme }) => theme.colors.mksBlue};
+    background-color: ${({ theme }) => theme.colors.whiteBackground};
     box-sizing: border-box;
     color: black;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vw;
     justify-content: space-between;
     margin: 0;
     padding: 0;
