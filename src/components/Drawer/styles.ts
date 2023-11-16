@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface IDrawerProps {
-  isOpen: boolean;
+  open: boolean;
 }
 
 export const DrawerWrapper = styled.div<IDrawerProps>`
@@ -12,6 +12,6 @@ export const DrawerWrapper = styled.div<IDrawerProps>`
   width: 30rem;
   background-color: ${({ theme }) => theme.colors.mksBlue};
   color: #fff;
-  transform: translateX(${(props) => (props.isOpen ? "0" : "30rem")});
+  transform: translateX(${(props) => (props.open ? "0" : "30rem")});
   transition: transform 0.7s ease-in-out;
 `;
