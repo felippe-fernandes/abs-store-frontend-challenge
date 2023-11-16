@@ -9,5 +9,6 @@ export const FooterContainer = styled.footer`
   font-weight: 400;
   height: 2rem;
   justify-content: center;
+  line-height: 15px;
   width: 100vw;
 `;
