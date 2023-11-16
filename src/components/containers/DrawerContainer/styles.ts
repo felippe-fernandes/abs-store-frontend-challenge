@@ -44,10 +44,14 @@ export const DrawerTotalPriceContainer = styled.div`
   align-items: center;
   display: flex;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 15px;
   justify-content: space-around;
 `;
+
+export const DrawerTotalPriceText = styled.span``;
+
+export const DrawerTotalPriceValue = styled.span``;
 
 export const DrawerFooterContainer = styled.button`
   background-color: ${({ theme }) => theme.colors.black};
