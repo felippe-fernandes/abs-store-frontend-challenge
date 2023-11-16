@@ -12,7 +12,6 @@ export const DrawerWrapper = styled.div<IDrawerProps>`
   width: 30rem;
   background-color: ${({ theme }) => theme.colors.mksBlue};
   color: #fff;
-  padding: ${(props) => (props.isOpen ? "1rem" : "0")};
   transform: translateX(${(props) => (props.isOpen ? "0" : "30rem")});
   transition: transform 0.7s ease-in-out;
 `;
