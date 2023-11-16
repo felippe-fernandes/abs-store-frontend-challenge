@@ -20,7 +20,8 @@ export interface IProps {
 }
 
 const DrawerContainer = ({ isOpen, toggleDrawer }: IProps) => {
-  const cartProducts = useCartStore((state) => state.products);
+  const cartProducts = useCartStore((state) => state.cartProducts);
+  const deleteProduct = useCartStore((state) => state.removeProduct);
   return (
     <DrawerComponent isOpen={isOpen} toggleDrawer={toggleDrawer}>
       <Drawer>
@@ -33,7 +34,9 @@ const DrawerContainer = ({ isOpen, toggleDrawer }: IProps) => {
           </DrawerHeaderCloseButton>
         </DrawerHeaderContainer>
         <DrawerBodyContainer>
-          <CartProducts products={cartProducts} />
+          <CartProducts
+            products={cartProducts.filter((item) => item.quantity !== 0)}
+          />
         </DrawerBodyContainer>
         <DrawerTotalPriceContainer>
           <DrawerTotalPriceText>Total de compras</DrawerTotalPriceText>

@@ -19,10 +19,7 @@ const Home = () => {
           <CardContainer
             key={index}
             product={product}
-            buyButton={() => {
-              addItemToCart(product);
-              toggleDrawer();
-            }}
+            buyButton={() => addItemToCart(product)}
           />
         ))}
       </ProductGrid>

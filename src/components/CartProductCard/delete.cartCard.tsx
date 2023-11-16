@@ -1,7 +1,11 @@
 import { DeleteButton } from "./styles";
 
-const CartDeleteItem = () => {
-  return <DeleteButton>X</DeleteButton>;
+export interface IProps {
+  handleDeleteItem: () => void;
+}
+
+const CartDeleteItem = ({ handleDeleteItem }: IProps) => {
+  return <DeleteButton onClick={handleDeleteItem}>X</DeleteButton>;
 };
 
 export default CartDeleteItem;

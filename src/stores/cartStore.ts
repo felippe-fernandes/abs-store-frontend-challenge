@@ -2,36 +2,35 @@ import { IProduct, IProductsWithQuantity } from "@/types/API";
 import { create } from "zustand";
 
 interface ICartState {
-  products: IProductsWithQuantity[];
+  cartProducts: IProductsWithQuantity[];
   increaseQuantity: (product: IProduct) => void;
   decreaseQuantity: (product: IProduct) => void;
   removeProduct: (product: IProduct) => void;
 }
 
-export const useCartStore = create<ICartState>()((set, get) => ({
-  products: [],
+export const useCartStore = create<ICartState>()((set) => ({
+  cartProducts: [],
 
-  increaseQuantity: (product) =>
+  increaseQuantity: (cartProduct) =>
     set((state) => {
-      console.log("🚀 | state:", state.products);
-      if (state.products.length === 0) {
+      if (state.cartProducts.some((item) => item.id === cartProduct.id)) {
         return {
-          products: [...state.products, { ...product, quantity: 1 }]
+          cartProducts: state.cartProducts.map((item) => {
+            if (item.id === cartProduct.id) {
+              return { ...item, quantity: (item.quantity || 0) + 1 };
+            }
+            return item;
+          })
         };
       }
       return {
-        products: state.products.map((item) => {
-          if (item.id === product.id) {
-            return { ...item, quantity: (item.quantity || 0) + 1 };
-          }
-          return item;
-        })
+        cartProducts: [...state.cartProducts, { ...cartProduct, quantity: 1 }]
       };
     }),
 
   decreaseQuantity: (product) =>
     set((state) => ({
-      products: state.products.map((item) => {
+      cartProducts: state.cartProducts.map((item) => {
         if (item.id === product.id) {
           return { ...item, quantity: (item.quantity || 0) - 1 };
         }
@@ -40,6 +39,6 @@ export const useCartStore = create<ICartState>()((set, get) => ({
     })),
   removeProduct: (product) =>
     set((state) => ({
-      products: state.products?.filter((item) => item.id !== product.id)
+      cartProducts: state.cartProducts?.filter((item) => item.id !== product.id)
     }))
 }));

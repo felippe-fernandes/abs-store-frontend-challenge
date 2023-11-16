@@ -9,6 +9,7 @@ export interface IProps {
 const CartCardContainer = ({ product }: IProps) => {
   const incCounter = useCartStore((action) => action.increaseQuantity);
   const decCounter = useCartStore((action) => action.decreaseQuantity);
+  const deleteItem = useCartStore((action) => action.removeProduct);
   return (
     <CartProductCard.Root>
       <CartProductCard.Image imageUrl={product.photo} alt={product.name} />
@@ -19,7 +20,7 @@ const CartCardContainer = ({ product }: IProps) => {
         decCounter={() => decCounter(product)}
       />
       <CartProductCard.Price price={product.price} />
-      <CartProductCard.Delete />
+      <CartProductCard.Delete handleDeleteItem={() => deleteItem(product)} />
     </CartProductCard.Root>
   );
 };
