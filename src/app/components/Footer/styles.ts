@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 2rem;
   background-color: ${({ theme }) => theme.colors.footerBackground};
-  width: 100vw;
   color: ${({ theme }) => theme.colors.black};
-  font-weight: 400;
+  display: flex;
   font-size: 12px;
+  font-weight: 400;
+  height: 2rem;
+  justify-content: center;
+  width: 100vw;
 `;
