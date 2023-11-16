@@ -1,19 +1,17 @@
 "use client";
 
+import Card from "./components/Card";
+import productsMock from "../../mocks";
+import CardContainer from "./components/containers/cardContainer";
 import { MainContainer, ProductGrid } from "./styles";
 
 export default function Home() {
   return (
     <MainContainer>
       <ProductGrid>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
+        {productsMock.products.map((product, index) => (
+          <CardContainer key={index} product={product} />
+        ))}
       </ProductGrid>
     </MainContainer>
   );
