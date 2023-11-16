@@ -24,15 +24,15 @@ export const DrawerHeaderTitle = styled.span`
 `;
 
 export const DrawerHeaderCloseButton = styled.button`
+  aspect-ratio: 1;
   background-color: ${({ theme }) => theme.colors.black};
   border: none;
   border-radius: 100%;
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 300;
   line-height: 15px;
-  aspect-ratio: 1;
   width: 2rem;
 `;
 

@@ -5,13 +5,14 @@ interface IDrawerProps {
 }
 
 export const DrawerWrapper = styled.div<IDrawerProps>`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 30rem;
   background-color: ${({ theme }) => theme.colors.mksBlue};
+  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
   color: #fff;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
   transform: translateX(${(props) => (props.open ? "0" : "30rem")});
   transition: transform 0.7s ease-in-out;
+  width: 30rem;
 `;
