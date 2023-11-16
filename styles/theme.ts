@@ -5,7 +5,8 @@ const theme = {
     white: "#FFFFFF",
     black: "#000000",
     productText: "#2C2C2C",
-    priceTagBackground: "#373737"
+    priceTagBackground: "#373737",
+    footerBackground: "#EEEEEE"
   }
 };
 

@@ -2,11 +2,15 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 body {
+    background-color: ${({ theme }) => theme.colors.mksBlue};
+    box-sizing: border-box;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: ${({ theme }) => theme.colors.mksBlue};
-    color: black;
 }   
 `;
 
