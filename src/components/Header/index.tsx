@@ -1,3 +1,4 @@
+import { useDrawerStore } from "@/stores/drawerStores";
 import CartButton from "../CartButton";
 import {
   HeaderContainer,
@@ -7,13 +8,14 @@ import {
 } from "./styles";
 
 const Header = () => {
+  const toggleDrawer = useDrawerStore((action) => action.toggleDrawer);
   return (
     <HeaderContainer>
       <LogoContainer>
         <LogoTitle>MKS</LogoTitle>
         <LogoSubtitle>Sistemas</LogoSubtitle>
       </LogoContainer>
-      <CartButton count={0} onClick={() => console.log("cliquei")} />
+      <CartButton count={0} onClick={toggleDrawer} />
     </HeaderContainer>
   );
 };

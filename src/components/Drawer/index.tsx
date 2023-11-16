@@ -1,9 +1,12 @@
-import Drawer from "react-modern-drawer";
-<Drawer
-  open={isOpen}
-  onClose={toggleDrawer}
-  direction="right"
-  className="bla bla bla"
->
-  <div>Hello World</div>
-</Drawer>;
+import { DrawerWrapper } from "./styles";
+
+export interface IProps {
+  isOpen: boolean;
+  children: React.ReactNode;
+}
+
+const Drawer = ({ isOpen, children }: IProps) => {
+  return <DrawerWrapper isOpen={isOpen}>{children}</DrawerWrapper>;
+};
+
+export default Drawer;

@@ -13,7 +13,7 @@ export const LogoContainer = styled.div`
   align-items: flex-end;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
-  height: 2rem;
+  min-height: 2rem;
 `;
 
 export const LogoTitle = styled.span`

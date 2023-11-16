@@ -11,5 +11,5 @@ export const ProductGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
-  margin: 5rem 10rem;
+  margin: 5rem 6rem;
 `;
