@@ -5,7 +5,8 @@ import {
   DrawerFooterContainer,
   DrawerHeaderContainer,
   DrawerHeaderTitle,
-  DrawerHeaderCloseButton
+  DrawerHeaderCloseButton,
+  DrawerTotalPriceContainer
 } from "./styles";
 import CartProducts from "@/components/CartProducts";
 
@@ -24,6 +25,10 @@ const DrawerContainer = () => {
       <DrawerBodyContainer>
         <CartProducts />
       </DrawerBodyContainer>
+      <DrawerTotalPriceContainer>
+        <span>Total de compras</span>
+        <span>R$878</span>
+      </DrawerTotalPriceContainer>
       <DrawerFooterContainer onClick={() => console.log("cliquei")}>
         Finalizar Compra
       </DrawerFooterContainer>

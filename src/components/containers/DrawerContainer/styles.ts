@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Drawer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 8fr 1fr;
+  grid-template-rows: 1.5fr 7fr repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100%;
@@ -36,7 +36,18 @@ export const DrawerHeaderCloseButton = styled.button`
   width: 2rem;
 `;
 
-export const DrawerBodyContainer = styled.div``;
+export const DrawerBodyContainer = styled.div`
+  overflow-y: auto;
+`;
+
+export const DrawerTotalPriceContainer = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 15px;
+  justify-content: space-around;
+`;
 
 export const DrawerFooterContainer = styled.button`
   background-color: ${({ theme }) => theme.colors.black};

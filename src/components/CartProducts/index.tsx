@@ -1,8 +1,12 @@
+import { CartProductsContainer } from "./styles";
+
 const CartProducts = () => {
   return (
-    <div>
-      <span>teste</span>
-    </div>
+    <CartProductsContainer>
+      <div style={{ backgroundColor: "green", gridArea: "1 / 2 / 2 / 3" }}>
+        teste
+      </div>
+    </CartProductsContainer>
   );
 };
 
