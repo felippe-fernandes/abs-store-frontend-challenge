@@ -1,4 +1,4 @@
-import { IResponse } from "../types/API";
+import { IResponse } from "../src/types/API";
 
 const productsMock: IResponse = {
   products: [

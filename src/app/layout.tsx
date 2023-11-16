@@ -5,7 +5,7 @@ import Providers from "../../lib/Providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"]
 });
@@ -14,7 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head></head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Providers>
           <Header />
           {children}

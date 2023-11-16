@@ -6,7 +6,7 @@ interface IDrawerProps {
 
 export const DrawerWrapper = styled.div<IDrawerProps>`
   background-color: ${({ theme }) => theme.colors.mksBlue};
-  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: -5px 0 6px 0 rgba(0, 0, 0, 0.13);
   color: #fff;
   height: 100%;
   position: fixed;

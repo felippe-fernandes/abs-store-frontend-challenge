@@ -1,4 +1,4 @@
-import { IProduct } from "../../../../../types/API";
+import { IProduct } from "../../../types/API";
 import Card from "../../Card";
 
 interface IProps {

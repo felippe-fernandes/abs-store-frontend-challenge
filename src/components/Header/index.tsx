@@ -1,5 +1,5 @@
 import { useDrawerStore } from "@/stores/drawerStores";
-import CartButton from "../CartButton";
+import HeaderCartButton from "../HeaderCartButton";
 import {
   HeaderContainer,
   LogoContainer,
@@ -15,7 +15,7 @@ const Header = () => {
         <LogoTitle>MKS</LogoTitle>
         <LogoSubtitle>Sistemas</LogoSubtitle>
       </LogoContainer>
-      <CartButton count={0} onClick={toggleDrawer} />
+      <HeaderCartButton count={0} onClick={toggleDrawer} />
     </HeaderContainer>
   );
 };

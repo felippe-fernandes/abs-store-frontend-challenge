@@ -4,8 +4,8 @@ export const Drawer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1.5fr 7fr repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   height: 100%;
 `;
 
@@ -37,6 +37,11 @@ export const DrawerHeaderCloseButton = styled.button`
 `;
 
 export const DrawerBodyContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1.5fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   overflow-y: auto;
 `;
 

@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void;
 }
 
-const CartButton = ({ count, onClick }: Props) => {
+const HeaderCartButton = ({ count, onClick }: Props) => {
   return (
     <ButtonContainer onClick={onClick}>
       <CartIcon />
@@ -15,4 +15,4 @@ const CartButton = ({ count, onClick }: Props) => {
   );
 };
 
-export default CartButton;
+export default HeaderCartButton;

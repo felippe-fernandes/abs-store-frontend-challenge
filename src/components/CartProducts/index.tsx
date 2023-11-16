@@ -1,11 +1,17 @@
+import { IProduct } from "@/types/API";
+import CartCardContainer from "../containers/CartCardContainer";
 import { CartProductsContainer } from "./styles";
+export interface IProps {
+  products: IProduct[];
+}
 
-const CartProducts = () => {
+const CartProducts = ({ products }: IProps) => {
+  console.log("🚀 | products:", products);
   return (
     <CartProductsContainer>
-      <div style={{ backgroundColor: "green", gridArea: "1 / 2 / 2 / 3" }}>
-        teste
-      </div>
+      {products.slice(0, 5).map((product) => (
+        <CartCardContainer key={product.id} product={product} />
+      ))}
     </CartProductsContainer>
   );
 };
