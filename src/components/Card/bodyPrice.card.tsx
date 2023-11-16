@@ -4,7 +4,7 @@ export interface CardBodyPriceProps {
   price: string;
 }
 
-function CardBodyPrice({ price }: CardBodyPriceProps) {
+const CardBodyPrice = ({ price }: CardBodyPriceProps) => {
   return (
     <CardProductPrice>
       {parseInt(price).toLocaleString("pt-BR", {
@@ -14,6 +14,6 @@ function CardBodyPrice({ price }: CardBodyPriceProps) {
       })}
     </CardProductPrice>
   );
-}
+};
 
 export default CardBodyPrice;

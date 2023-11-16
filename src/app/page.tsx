@@ -1,18 +1,24 @@
 "use client";
 
-import Card from "./components/Card";
+import CardContainer from "@/components/containers/cardContainer";
 import productsMock from "../../mocks";
-import CardContainer from "./components/containers/cardContainer";
 import { MainContainer, ProductGrid } from "./styles";
+import { IProduct } from "@/types/API";
 
-export default function Home() {
+const Home = () => {
   return (
     <MainContainer>
       <ProductGrid>
-        {productsMock.products.map((product, index) => (
-          <CardContainer key={index} product={product} />
+        {productsMock.products.map((product: IProduct, index: number) => (
+          <CardContainer
+            key={index}
+            product={product}
+            handleClickButton={() => console.log("🚀 | product:", product)}
+          />
         ))}
       </ProductGrid>
     </MainContainer>
   );
-}
+};
+
+export default Home;

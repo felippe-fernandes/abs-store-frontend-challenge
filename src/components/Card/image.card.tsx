@@ -6,12 +6,12 @@ export interface CardImageProps {
   alt: string;
 }
 
-function CardImage({ imageUrl, alt }: CardImageProps) {
+const CardImage = ({ imageUrl, alt }: CardImageProps) => {
   return (
     <CardImageContainer>
-      <Image src={imageUrl} alt={alt} width={128} height={128} />
+      <Image src={imageUrl} alt={alt} width={128} height={128} priority />
     </CardImageContainer>
   );
-}
+};
 
 export default CardImage;

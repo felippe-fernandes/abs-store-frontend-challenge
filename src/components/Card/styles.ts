@@ -42,7 +42,6 @@ export const CardProductPrice = styled.div`
   grid-area: 1 / 3 / 2 / 4;
   height: fit-content;
   padding: 0.2rem 0.5rem;
-  width: 4rem;
 `;
 
 export const CardProductDescription = styled.div`

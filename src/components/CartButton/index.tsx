@@ -1,4 +1,4 @@
-import CartIcon from "../../../../assets/CartIcon";
+import CartIcon from "@/assets/CartIcon";
 import { ButtonContainer, CartNumber } from "./styles";
 
 interface Props {

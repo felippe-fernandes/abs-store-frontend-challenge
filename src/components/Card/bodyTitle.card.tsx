@@ -4,8 +4,8 @@ export interface CardBodyTitleProps {
   title: string;
 }
 
-function CardBodyTitle({ title }: CardBodyTitleProps) {
+const CardBodyTitle = ({ title }: CardBodyTitleProps) => {
   return <CardProductTitle>{title}</CardProductTitle>;
-}
+};
 
 export default CardBodyTitle;
