@@ -5,6 +5,7 @@ export const ButtonContainer = styled.button`
   background: ${({ theme }) => theme.colors.white};
   border: 0;
   border-radius: 8px;
+  cursor: pointer;
   display: flex;
   height: 2.5rem;
   justify-content: space-evenly;
