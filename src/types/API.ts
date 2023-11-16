@@ -13,3 +13,5 @@ export interface IResponse {
   products: IProduct[];
   count: number;
 }
+
+export type IProductsWithQuantity = IProduct & { quantity?: number };

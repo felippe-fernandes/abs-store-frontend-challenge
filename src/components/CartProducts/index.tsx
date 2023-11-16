@@ -6,10 +6,9 @@ export interface IProps {
 }
 
 const CartProducts = ({ products }: IProps) => {
-  console.log("🚀 | products:", products);
   return (
     <CartProductsContainer>
-      {products.slice(0, 5).map((product) => (
+      {products.map((product) => (
         <CartCardContainer key={product.id} product={product} />
       ))}
     </CartProductsContainer>

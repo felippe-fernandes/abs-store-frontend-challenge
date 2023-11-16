@@ -7,6 +7,10 @@ export const Drawer = styled.div`
   grid-column-gap: 0;
   grid-row-gap: 0;
   height: 100%;
+  ::-webkit-scrollbar {
+    width: 0;
+    background-color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const DrawerHeaderContainer = styled.div`
@@ -37,6 +41,7 @@ export const DrawerHeaderCloseButton = styled.button`
 `;
 
 export const DrawerBodyContainer = styled.div`
+  align-items: start;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1.5fr;

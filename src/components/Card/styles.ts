@@ -64,6 +64,7 @@ export const CardActionContainer = styled.button`
   border-radius: 0 0 5px 5px;
   bottom: 0;
   color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
   display: flex;
   font-size: 14px;
   font-weight: 600;

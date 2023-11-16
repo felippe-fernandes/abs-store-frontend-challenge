@@ -1,19 +1,18 @@
-import { useDrawerStore } from "@/stores/drawerStores";
+import CartProducts from "@/components/CartProducts";
+import DrawerComponent from "@/components/Drawer";
 import {
+  Drawer,
   DrawerBodyContainer,
   // Drawer,
   DrawerFooterContainer,
+  DrawerHeaderCloseButton,
   DrawerHeaderContainer,
   DrawerHeaderTitle,
-  DrawerHeaderCloseButton,
   DrawerTotalPriceContainer,
-  DrawerTotalPriceValue,
   DrawerTotalPriceText,
-  Drawer
+  DrawerTotalPriceValue
 } from "./styles";
-import CartProducts from "@/components/CartProducts";
-import productsMock from "../../../../mocks";
-import DrawerComponent from "@/components/Drawer";
+import { useCartStore } from "@/stores/cartStore";
 
 export interface IProps {
   isOpen: boolean;
@@ -21,6 +20,7 @@ export interface IProps {
 }
 
 const DrawerContainer = ({ isOpen, toggleDrawer }: IProps) => {
+  const cartProducts = useCartStore((state) => state.products);
   return (
     <DrawerComponent isOpen={isOpen} toggleDrawer={toggleDrawer}>
       <Drawer>
@@ -33,11 +33,24 @@ const DrawerContainer = ({ isOpen, toggleDrawer }: IProps) => {
           </DrawerHeaderCloseButton>
         </DrawerHeaderContainer>
         <DrawerBodyContainer>
-          <CartProducts products={productsMock.products} />
+          <CartProducts products={cartProducts} />
         </DrawerBodyContainer>
         <DrawerTotalPriceContainer>
           <DrawerTotalPriceText>Total de compras</DrawerTotalPriceText>
-          <DrawerTotalPriceValue>R$878</DrawerTotalPriceValue>
+          <DrawerTotalPriceValue>
+            {cartProducts
+              .reduce((accumulator, product) => {
+                return (
+                  accumulator +
+                  parseFloat(product.price) * (product.quantity || 1)
+                );
+              }, 0)
+              .toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+                maximumFractionDigits: 0
+              })}
+          </DrawerTotalPriceValue>
         </DrawerTotalPriceContainer>
         <DrawerFooterContainer onClick={() => console.log("cliquei")}>
           Finalizar Compra

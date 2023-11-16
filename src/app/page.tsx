@@ -6,9 +6,11 @@ import { IProduct } from "@/types/API";
 import productsMock from "../../mocks";
 import { MainContainer, ProductGrid } from "./styles";
 import DrawerContainer from "@/components/containers/DrawerContainer";
+import { useCartStore } from "@/stores/cartStore";
 
 const Home = () => {
   const { isOpen, toggleDrawer } = useDrawerStore();
+  const addItemToCart = useCartStore((action) => action.increaseQuantity);
 
   return (
     <MainContainer>
@@ -17,7 +19,10 @@ const Home = () => {
           <CardContainer
             key={index}
             product={product}
-            handleClickButton={() => console.log("🚀 | product:", product)}
+            buyButton={() => {
+              addItemToCart(product);
+              toggleDrawer();
+            }}
           />
         ))}
       </ProductGrid>

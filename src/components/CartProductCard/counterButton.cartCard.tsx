@@ -4,12 +4,18 @@ import {
   ToggleQuantityButton
 } from "./styles";
 
-const CartCardCounterButton = () => {
+export interface IProps {
+  counter: number;
+  incCounter: () => void;
+  decCounter: () => void;
+}
+
+const CartCardCounterButton = ({ counter, incCounter, decCounter }: IProps) => {
   return (
     <CartCardCounterButtonContainer>
-      <ToggleQuantityButton>-</ToggleQuantityButton>
-      <Counter>1</Counter>
-      <ToggleQuantityButton>+</ToggleQuantityButton>
+      <ToggleQuantityButton onClick={decCounter}>-</ToggleQuantityButton>
+      <Counter>{counter}</Counter>
+      <ToggleQuantityButton onClick={incCounter}>+</ToggleQuantityButton>
     </CartCardCounterButtonContainer>
   );
 };

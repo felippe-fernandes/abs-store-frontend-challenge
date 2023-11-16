@@ -31,6 +31,7 @@ const Drawer = ({ isOpen, toggleDrawer, children }: IProps) => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen, toggleDrawer]);
+
   return (
     <DrawerWrapper open={isOpen} ref={drawerRef}>
       {children}

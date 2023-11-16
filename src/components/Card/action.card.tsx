@@ -2,12 +2,12 @@ import ShoppingBag from "@/assets/ShoppingBag";
 import { CardActionContainer } from "./styles";
 
 export interface CardActionProps {
-  handleClickButton: () => void;
+  buyButton: () => void;
 }
 
-const CardAction = ({ handleClickButton }: CardActionProps) => {
+const CardAction = ({ buyButton }: CardActionProps) => {
   return (
-    <CardActionContainer onClick={handleClickButton}>
+    <CardActionContainer onClick={buyButton}>
       <ShoppingBag />
       Comprar
     </CardActionContainer>

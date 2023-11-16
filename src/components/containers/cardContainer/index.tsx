@@ -3,10 +3,10 @@ import Card from "../../Card";
 
 interface IProps {
   product: IProduct;
-  handleClickButton: () => void;
+  buyButton: () => void;
 }
 
-const CardContainer = ({ product, handleClickButton }: IProps) => {
+const CardContainer = ({ product, buyButton }: IProps) => {
   return (
     <Card.Root>
       <Card.Image imageUrl={product.photo} alt={product.name} />
@@ -15,7 +15,7 @@ const CardContainer = ({ product, handleClickButton }: IProps) => {
         <Card.BodyPrice price={product.price} />
         <Card.BodyDescription description={product.description} />
       </Card.Body>
-      <Card.CardAction handleClickButton={handleClickButton} />
+      <Card.CardAction buyButton={buyButton} />
     </Card.Root>
   );
 };
