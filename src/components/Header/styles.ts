@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.mksBlue};
+  background-color: ${({ theme }) => theme.colors.absLightBlue};
   display: flex;
   height: 6rem;
   justify-content: space-between;
   padding: 0 5.5rem 0 4rem;
+
+  @media (max-width: 620px) {
+    padding: 1rem;
+  }
 `;
 
 export const LogoContainer = styled.div`

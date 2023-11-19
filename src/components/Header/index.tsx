@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <LogoTitle>MKS</LogoTitle>
-        <LogoSubtitle>Sistemas</LogoSubtitle>
+        <LogoTitle>ABS</LogoTitle>
+        <LogoSubtitle>Store</LogoSubtitle>
       </LogoContainer>
       <HeaderCartButton count={itemsInCart} onClick={toggleDrawer} />
     </HeaderContainer>

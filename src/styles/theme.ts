@@ -1,13 +1,13 @@
 const theme = {
   colors: {
-    mksBlue: "#0F52BA",
-    whiteBackground: "#F9F9F9",
-    white: "#FFFFFF",
+    absLightBlue: "#5faab1",
     black: "#000000",
-    productText: "#2C2C2C",
-    priceTagBackground: "#373737",
+    cartButtonBorder: "#BFBFBF",
     footerBackground: "#EEEEEE",
-    cartButtonBorder: "#BFBFBF"
+    priceTagBackground: "#373737",
+    productText: "#2C2C2C",
+    white: "#FFFFFF",
+    whiteBackground: "#F9F9F9"
   }
 };
 

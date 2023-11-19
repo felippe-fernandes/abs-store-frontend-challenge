@@ -1,5 +1,5 @@
-import ShoppingBag from "@/assets/ShoppingBag";
-import { CardActionContainer } from "./styles";
+import { CardActionContainer, CardActionText } from "./styles";
+import { ShoppingBag } from "lucide-react";
 
 export interface CardActionProps {
   buyButton: () => void;
@@ -9,7 +9,7 @@ const CardAction = ({ buyButton }: CardActionProps) => {
   return (
     <CardActionContainer onClick={buyButton}>
       <ShoppingBag />
-      Comprar
+      <CardActionText>Comprar</CardActionText>
     </CardActionContainer>
   );
 };

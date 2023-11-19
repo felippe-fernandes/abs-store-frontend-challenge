@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CardImageContainer } from "./styles";
+import { useMediaQuery } from "react-responsive";
 
 export interface CardImageProps {
   imageUrl: string;
@@ -7,9 +8,16 @@ export interface CardImageProps {
 }
 
 const CardImage = ({ imageUrl, alt }: CardImageProps) => {
+  const isMobile = useMediaQuery({ maxWidth: 620 });
   return (
     <CardImageContainer>
-      <Image src={imageUrl} alt={alt} width={128} height={128} priority />
+      <Image
+        src={imageUrl}
+        alt={alt}
+        width={!isMobile ? 110 : 80}
+        height={!isMobile ? 110 : 80}
+        priority
+      />
     </CardImageContainer>
   );
 };

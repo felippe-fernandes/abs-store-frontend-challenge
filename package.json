@@ -1,5 +1,5 @@
 {
-  "name": "mks-sistemas-frontend-challenge",
+  "name": "abs-store-frontend-challenge",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.292.0",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-responsive": "^9.0.2",
     "styled-components": "^6.1.1",
     "zustand": "^4.4.6"
   },

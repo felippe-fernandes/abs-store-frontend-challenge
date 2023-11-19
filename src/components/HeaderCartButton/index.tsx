@@ -1,5 +1,10 @@
-import CartIcon from "@/assets/CartIcon";
-import { ButtonContainer, CartNumber } from "./styles";
+import { useMediaQuery } from "react-responsive";
+import {
+  ButtonContainer,
+  CartCountMobileWrapper,
+  CartNumber,
+  StyledCartIcon
+} from "./styles";
 
 interface Props {
   count: number;
@@ -7,10 +12,17 @@ interface Props {
 }
 
 const HeaderCartButton = ({ count, onClick }: Props) => {
+  const isMobile = useMediaQuery({ maxWidth: 620 });
   return (
     <ButtonContainer onClick={onClick}>
-      <CartIcon />
-      <CartNumber>{count}</CartNumber>
+      <StyledCartIcon />
+      {!isMobile ? (
+        <CartNumber>{count}</CartNumber>
+      ) : (
+        <CartCountMobileWrapper>
+          <CartNumber>{count}</CartNumber>
+        </CartCountMobileWrapper>
+      )}
     </ButtonContainer>
   );
 };

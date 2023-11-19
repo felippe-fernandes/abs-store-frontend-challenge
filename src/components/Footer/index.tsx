@@ -2,9 +2,7 @@ import { FooterContainer } from "./styles";
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      MKS Sistemas © Todos os direitos reservados
-    </FooterContainer>
+    <FooterContainer>ABS Store © Todos os direitos reservados</FooterContainer>
   );
 };
 

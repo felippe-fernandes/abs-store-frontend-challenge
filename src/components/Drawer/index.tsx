@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { DrawerWrapper } from "./styles";
-import { useDrawerStore } from "@/stores/drawerStores";
 
 export interface IProps {
   isOpen: boolean;
@@ -13,7 +12,6 @@ const Drawer = ({ isOpen, toggleDrawer, children }: IProps) => {
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      // Close the drawer if it's open and the click is outside of the drawer
       if (
         isOpen &&
         drawerRef.current &&
@@ -23,10 +21,8 @@ const Drawer = ({ isOpen, toggleDrawer, children }: IProps) => {
       }
     };
 
-    // Attach the event listener to the document
     document.addEventListener("click", handleOutsideClick);
 
-    // Clean up the event listener on component unmount
     return () => {
       document.removeEventListener("click", handleOutsideClick);
     };

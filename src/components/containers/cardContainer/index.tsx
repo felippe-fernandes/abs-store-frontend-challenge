@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import { IProduct } from "../../../types/API";
 import Card from "../../Card";
 
@@ -7,6 +8,7 @@ interface IProps {
 }
 
 const CardContainer = ({ product, buyButton }: IProps) => {
+  const isMobile = useMediaQuery({ maxWidth: 620 });
   return (
     <Card.Root>
       <Card.Image imageUrl={product.photo} alt={product.name} />
@@ -14,8 +16,9 @@ const CardContainer = ({ product, buyButton }: IProps) => {
         <Card.BodyTitle title={product.name} />
         <Card.BodyPrice price={product.price} />
         <Card.BodyDescription description={product.description} />
+        {isMobile && <Card.CardAction buyButton={buyButton} />}
       </Card.Body>
-      <Card.CardAction buyButton={buyButton} />
+      {!isMobile && <Card.CardAction buyButton={buyButton} />}
     </Card.Root>
   );
 };

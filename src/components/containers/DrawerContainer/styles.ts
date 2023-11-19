@@ -8,8 +8,8 @@ export const Drawer = styled.div`
   grid-row-gap: 0;
   height: 100%;
   ::-webkit-scrollbar {
-    width: 0;
     background-color: ${({ theme }) => theme.colors.white};
+    width: 0;
   }
 `;
 
@@ -48,6 +48,9 @@ export const DrawerBodyContainer = styled.div`
   grid-column-gap: 0;
   grid-row-gap: 0;
   overflow-y: auto;
+  @media (max-width: 620px) {
+    grid-template-columns: 1fr 12fr 1fr;
+  }
 `;
 
 export const DrawerTotalPriceContainer = styled.div`
@@ -59,7 +62,11 @@ export const DrawerTotalPriceContainer = styled.div`
   justify-content: space-around;
 `;
 
-export const DrawerTotalPriceText = styled.span``;
+export const DrawerTotalPriceText = styled.span`
+  @media (max-width: 620px) {
+    display: none;
+  }
+`;
 
 export const DrawerTotalPriceValue = styled.span``;
 

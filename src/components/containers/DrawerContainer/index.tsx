@@ -3,7 +3,6 @@ import DrawerComponent from "@/components/Drawer";
 import {
   Drawer,
   DrawerBodyContainer,
-  // Drawer,
   DrawerFooterContainer,
   DrawerHeaderCloseButton,
   DrawerHeaderContainer,
@@ -21,7 +20,6 @@ export interface IProps {
 
 const DrawerContainer = ({ isOpen, toggleDrawer }: IProps) => {
   const cartProducts = useCartStore((state) => state.cartProducts);
-  const deleteProduct = useCartStore((state) => state.removeProduct);
   return (
     <DrawerComponent isOpen={isOpen} toggleDrawer={toggleDrawer}>
       <Drawer>

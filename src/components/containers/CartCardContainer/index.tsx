@@ -1,6 +1,6 @@
 import CartProductCard from "@/components/CartProductCard";
 import { useCartStore } from "@/stores/cartStore";
-import { IProduct, IProductsWithQuantity } from "@/types/API";
+import { IProductsWithQuantity } from "@/types/API";
 
 export interface IProps {
   product: IProductsWithQuantity;
