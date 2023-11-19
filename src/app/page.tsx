@@ -1,12 +1,12 @@
 "use client";
 
-import CardContainer from "@/components/containers/CardContainer";
 import { useDrawerStore } from "@/stores/drawerStores";
 import { IProduct } from "@/types/API";
 import productsMock from "../../mocks";
 import { MainContainer, ProductGrid } from "./styles";
 import DrawerContainer from "@/components/containers/DrawerContainer";
 import { useCartStore } from "@/stores/cartStore";
+import CardContainer from "@/components/containers/cardContainer";
 
 const Home = () => {
   const { isOpen, toggleDrawer } = useDrawerStore();
