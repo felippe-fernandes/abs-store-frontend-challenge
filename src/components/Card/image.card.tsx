@@ -14,8 +14,8 @@ const CardImage = ({ imageUrl, alt }: CardImageProps) => {
       <Image
         src={imageUrl}
         alt={alt}
-        width={!isMobile ? 110 : 80}
-        height={!isMobile ? 110 : 80}
+        width={!isMobile ? 110 : 96}
+        height={!isMobile ? 110 : 96}
         priority
       />
     </CardImageContainer>
