@@ -17,7 +17,7 @@ export const DrawerWrapper = styled.div<IDrawerProps>`
   width: 30rem;
 
   @media (max-width: 620px) {
-    right: -1rem;
+    right: -10rem;
     width: calc(100% + 1rem);
   }
 `;
