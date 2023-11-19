@@ -1,9 +1,9 @@
 "use client";
 
 import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
 import StyledComponentsRegistry from "./registry";
-import GlobalStyles from "../styles/GlobalStyles";
+import GlobalStyles from "@/styles/GlobalStyles";
+import theme from "@/styles/theme";
 
 const Providers = (props: React.PropsWithChildren) => {
   return (
