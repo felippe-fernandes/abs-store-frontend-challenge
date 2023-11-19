@@ -16,7 +16,7 @@ export const CardRootContainer = styled.div`
   @media (max-width: 620px) {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 3rem;
+    grid-column-gap: 1.5rem;
     height: 7rem;
     padding: 1rem;
     width: 100%;
@@ -65,7 +65,6 @@ export const CardProductTitle = styled.div`
   line-height: 19px;
 
   @media (max-width: 620px) {
-    font-size: 16px;
     font-weight: 600;
     grid-area: 1 / 1 / 2 / 3;
     height: fit-content;
@@ -85,9 +84,7 @@ export const CardProductPrice = styled.div`
 
   @media (max-width: 620px) {
     align-items: center;
-    background-color: transparent;
-    border-radius: 0;
-    color: ${({ theme }) => theme.colors.productText};
+    border-radius: 0.5rem;
     display: flex;
     grid-area: 2 / 1 / 3 / 2;
     height: fit-content;
