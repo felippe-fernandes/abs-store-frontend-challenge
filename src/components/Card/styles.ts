@@ -16,9 +16,9 @@ export const CardRootContainer = styled.div`
   @media (max-width: 620px) {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 3rem;
     height: 7rem;
+    padding: 1rem;
     width: 100%;
   }
 `;
@@ -48,6 +48,7 @@ export const CardBodyContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 0.5rem;
+    grid-column-gap: 1rem;
     height: 100%;
     justify-items: center;
     padding: 0;
